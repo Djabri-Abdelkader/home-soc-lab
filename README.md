@@ -123,6 +123,9 @@ zeek-cut id.orig_h id.resp_h duration < conn.log | awk '$3 > 300'
 
 ```
 home-soc-lab/
+├── VMs/
+    ├── Linux/
+        ├── Elastic Stack Ubuntu Installation Guide.sh
 ├── docs/
 │   ├── architecture.drawio       # Draw.io source file
 │   ├── architecture.png          # Exported diagram

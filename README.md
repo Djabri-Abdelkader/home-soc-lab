@@ -143,6 +143,8 @@ home-soc-lab/
 ├── attack-simulations/
 │   └── T1059-powershell.md       # Step-by-step attack + expected alert
 └── docker-compose.yml
+└──README.md
+
 ```
 
 ---

@@ -126,6 +126,8 @@ home-soc-lab/
 ├── VMs/
     ├── Linux/
         ├── Elastic Stack Ubuntu Installation Guide.sh
+    ├── Widnows
+    ├── Kali
 ├── docs/
 │   ├── architecture.drawio       # Draw.io source file
 │   ├── architecture.png          # Exported diagram

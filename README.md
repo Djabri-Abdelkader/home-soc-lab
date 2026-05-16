@@ -13,12 +13,11 @@ A fully functional Security Operations Center (SOC) lab built on personal hardwa
 
 ## 🏗️ Architecture
 
-<!-- REPLACE this placeholder with your draw.io export PNG -->
-<!-- Export from draw.io: File > Export As > PNG, then commit to /docs/architecture.png -->
+
 ```
-[architecture.png goes here — export from draw.io and commit to /docs/]
+[architecture.png goes here — export from draw.io and commit to /Images/soc_lab_architecture_final.png]
 ```
-> **Draw.io file:** [`/Images/soc_lab_architecture_final.svg`](.//Images/soc_lab_architecture_final.svg)
+> **svg.io file:** [`/Images/soc_lab_architecture_final.svg`](./Images/soc_lab_architecture_final.svg)
 
 ---
 

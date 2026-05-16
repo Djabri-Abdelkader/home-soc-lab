@@ -18,7 +18,7 @@ A fully functional Security Operations Center (SOC) lab built on personal hardwa
 ```
 [architecture.png goes here — export from draw.io and commit to /docs/]
 ```
-> **Draw.io file:** [`/docs/architecture.drawio`](./docs/architecture.drawio)
+> **Draw.io file:** [`/Images/soc_lab_architecture_final.svg`](.//Images/soc_lab_architecture_final.svg)
 
 ---
 
@@ -128,9 +128,9 @@ home-soc-lab/
         ├── Elastic Stack Ubuntu Installation Guide.sh
     ├── Widnows
     ├── Kali
-├── docs/
-│   ├── architecture.drawio       # Draw.io source file
-│   ├── architecture.png          # Exported diagram
+├── Images/
+│   ├── architecture.drawio      
+│   ├── architecture.png          
 │   ├── linux-agent-setup.md
 │   ├── windows-sysmon-setup.md
 │   └── screenshots/

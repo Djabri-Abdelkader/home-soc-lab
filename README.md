@@ -55,6 +55,7 @@ home-soc-lab/
 │   ├── ├── auditd.sh
 │   ├── ├── elastic_stack_installation_guide.sh
 │   ├── ├── zeek_config.sh
+│   ├── ├── rsyslog.sh
 │   ├── Widnows
 │   ├── ├── 03_windows_Agent_Setup.ps1
 │   ├── ├── sysmon_windows.ps1

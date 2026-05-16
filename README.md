@@ -41,98 +41,26 @@ A fully functional Security Operations Center (SOC) lab built on personal hardwa
 - Windows VM (for Sysmon telemetry)
 - Docker (optional, for Elastic)
 
-### Steps
-
-```bash
-# 1. Clone the repo
-git clone https://github.com/Djabri-Abdelkader/home-soc-lab.git
-cd home-soc-lab
-
-# 2. Start Elastic Stack
-docker-compose up -d   # or follow /docs/manual-install.md
-
-# 3. Deploy agents
-# Linux: see /docs/linux-agent-setup.md
-# Windows: see /docs/windows-sysmon-setup.md
-
-# 4. Load detection rules
-# Kibana > Security > Rules > Import > /rules/*.ndjson
-```
-
-> Detailed setup guides in [`/docs/`](./docs/)
-
----
-
-## 🚀 Usage Examples
-
-### Sample: KQL Detection Rule — Suspicious PowerShell Execution (T1059.001)
-```kql
-event.code: "4104" and
-powershell.file.script_block_text: (*IEX* or *Invoke-Expression* or *DownloadString*)
-```
-
-### Sample: Zeek conn.log alert — long duration outbound connection
-```bash
-# Query in Kibana or via CLI:
-zeek-cut id.orig_h id.resp_h duration < conn.log | awk '$3 > 300'
-```
-
-### Sample Dashboard Output
-```
-[screenshot goes here — /docs/screenshots/dashboard.png]
-```
-
----
-
-## 📖 What I Learned
-
-<!-- ADD entries as you progress — one bullet per discovery, dated -->
-
-### Log Collection
-- [ ] *[DATE]* — How auditd syscall rules work and why they're noisy by default
-- [ ] *[DATE]* — Difference between Windows Security log channels and Sysmon channels
-
-### Detection Engineering
-- [ ] *[DATE]* — Why KQL `wildcard` queries are expensive vs field mapping
-- [ ] *[DATE]* — How to reduce false positives by baselining normal PowerShell usage
-
-### Infrastructure
-- [ ] *[DATE]* — How Elastic indices work and why ILM (Index Lifecycle Management) matters
-
----
-
-## 📋 Project Progress
-
-> Tracked via [GitHub Issues](https://github.com/Djabri-Abdelkader/home-soc-lab/issues)
-
-| Milestone | Status |
-|---|---|
-| Elastic Stack running locally | ⬜ |
-| Linux log ingestion (syslog + auditd) | ⬜ |
-| Sysmon + Winlogbeat configured | ⬜ |
-| Zeek network capture pipeline | ⬜ |
-| First KQL detection rule written | ⬜ |
-| T1059 attack simulated + detected | ⬜ |
-| T1003 attack simulated + detected | ⬜ |
-| Dashboard built in Kibana | ⬜ |
-
----
 
 ## 📁 Repo Structure
 
 ```
 home-soc-lab/
-├── VMs/
-    ├── Linux/
-        ├── Elastic Stack Ubuntu Installation Guide.sh
-    ├── Widnows
-    ├── Kali
 ├── Images/
-│   ├── architecture.drawio      
-│   ├── architecture.png          
-│   ├── linux-agent-setup.md
-│   ├── windows-sysmon-setup.md
-│   └── screenshots/
+│   ├── soc_lab_architecture_final.png      
+│   ├── soc_lab_architecture_final.svg          
+├── VMs/
+│   ├── Linux/
+│   ├── ├── 01_ubuntu_siem_setup.sh
+│   ├── ├── auditd.sh
+│   ├── ├── elastic_stack_installation_guide.sh
+│   ├── ├── zeek_config.sh
+│   ├── Widnows
+│   ├── ├── 03_windows_Agent_Setup.ps1
+│   ├── ├── sysmon_windows.ps1
+│   ├── ├── windows_event_channels.ps1
+│   ├── Kali
+│   ├── ├── 02_ kali_agent_setup.sh
 ├── rules/
 │   └── *.ndjson                  # Exportable Elastic detection rules
 ├── configs/

@@ -14,9 +14,9 @@ A fully functional Security Operations Center (SOC) lab built on personal hardwa
 ## 🏗️ Architecture
 
 
-```
+
 ![image](https://github.com/Djabri-Abdelkader/home-soc-lab/blob/main/Images/soc_lab_architecture_final.png)
-```
+
 > **svg.io file:** [`/Images/soc_lab_architecture_final.svg`](./Images/soc_lab_architecture_final.svg)
 
 ---
